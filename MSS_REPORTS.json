@@ -1,0 +1,129 @@
+{
+  "schemeName": "MSS_REPORTS",
+  "type": "Screen",
+  "exportDate": "2026-06-19T09:06:17.346Z",
+  "version": "1.0",
+  "rows": [
+    {
+      "seqnr": "000010",
+      "functionName": "COM",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "par4": "",
+      "par5": "",
+      "deact": "",
+      "comment": "Manager Report Tree"
+    },
+    {
+      "seqnr": "000020",
+      "functionName": "COM",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "par4": "",
+      "par5": "",
+      "deact": "",
+      "comment": "HRSP 08.03.2026"
+    },
+    {
+      "seqnr": "000030",
+      "functionName": "PROG",
+      "par1": "MSS_REPORTS",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"==\": [\n    {\n      \"var\": \"PageEvent\"\n    },\n    \"Get\"\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Run MSS_REPORTS program, fill Report Tree"
+    },
+    {
+      "seqnr": "000040",
+      "functionName": "PJSON",
+      "par1": "page.Elements[FieldName=\"reportViewer\"].Data",
+      "par2": "SELREP",
+      "par3": "",
+      "par4": "{\n  \"==\": [\n    {\n      \"var\": \"PostFieldName\"\n    },\n    \"DOEXECUTE\"\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Run MSS_REPORTS program, fill Report Tree"
+    },
+    {
+      "seqnr": "000050",
+      "functionName": "PRINT",
+      "par1": "CONT",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"==\": [\n    {\n      \"var\": \"PostFieldName\"\n    },\n    \"DOEXECUTE\"\n  ]\n}",
+      "par5": "",
+      "deact": "*",
+      "comment": ""
+    },
+    {
+      "seqnr": "000060",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/attendances",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSS2002\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Attendances Report"
+    },
+    {
+      "seqnr": "000070",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/absences",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSS2001\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Absences Report"
+    },
+    {
+      "seqnr": "000080",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/flexible",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSSEsnek\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Flexible Report"
+    },
+    {
+      "seqnr": "000090",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/clockdata",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSS2011\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Clock Data Report"
+    },
+    {
+      "seqnr": "000100",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/clockdata",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSS20061\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Leave Targets Data Report"
+    },
+    {
+      "seqnr": "000110",
+      "functionName": "GOURL",
+      "par1": "/apps/exec/mss/reports/leave_entitlements",
+      "par2": "",
+      "par3": "",
+      "par4": "{\n  \"and\": [\n    {\n      \"==\": [\n        {\n          \"var\": \"PostFieldName\"\n        },\n       \"DOEXECUTE\"\n      ]\n    },\n    {\n      \"==\": [\n        {\n          \"var\": \"SELREP\"\n        },\n        \"repMSS20062\"\n      ]\n    }\n  ]\n}",
+      "par5": "",
+      "deact": "",
+      "comment": "Goto Leave Entitlements Data Report"
+    }
+  ]
+}
