@@ -8,6 +8,10 @@ Scheme Based Business Apps with UI Designs for Web and Mobile
 - [ESS Payroll Data](#ess-payroll-data) - Users can download their payroll and work paper by this menu
 - [ESS Travel Data](#ess-travel-data) - Users can submit new travel request to their manager by this menu
 - [ESS Expense Data](#ess-expense-data) - Users can submit expense form by this menu
+# 
+## ESS Report Tree Menu
+
+- [ESS Reports](#ess-reports) - Users can reach their reports by this menu
 
 ## ESS Infotypes
 ![ESS Infotypes](OrcHCM_ESSInfotypes.png)
