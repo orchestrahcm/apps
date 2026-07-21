@@ -70,14 +70,14 @@ Download [Screen](/orc.ess.exp.json), and make your changes according to your bu
 - July 21, 2026 - Initial Commit
 
 ## Report Tree Menu
-![ReportTreeApp](ReportTreeApp.png)
+![ESS Reports](OrcHCM_ESSReportTree.png)
 ### Business Requirement
-Users need to create a simple report tree for managers.
+Users need to reach their reports (attendance, absence).
 ### Solution Scenerio
-This app provides report tree for users. Raport nodes should be filled by an exit program called by PROG from scheme.
+This app provides report tree for users. Report nodes should be filled by an exit program called by PROG from scheme.
 ### Download Files and Upload to your OrchestraHCM
-Download [Screen](/orc.mss.reports.json) and [Scheme](/MSS_REPORTS.json) and make your changes according to your business requirements. No scheme need for this app, you can update tiles and screen according to your requirements.
-Also download exit program for creating nodes, [Program](/MSS_REPORTS.ts)
+Download [Screen](/orc.ess.reports.json) and [Scheme](/ESS_REPORTS.json) and make your changes according to your business requirements.
+Also download exit program for creating nodes, [Program](/ESS_ReportsProgram.ts)
 
 <details>
 <summary>MSS_REPORTS.ts</summary>
