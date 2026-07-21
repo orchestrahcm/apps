@@ -4,6 +4,7 @@ Scheme Based Business Apps with UI Designs for Web and Mobile
 ## Tile-Based ESS Menus
 
 - [ESS Infotypes](#ess-infotypes) - Users can reach their infotypes by this menu
+- [ESS Time Data](#ess-time-data) - Users can submit request (absence, attendance) to their managers and can reach their time datas by this menu
 
 ## ESS Infotypes
 ![ESS Infotypes](OrcHCM_ESSInfotypes.png)
@@ -13,6 +14,17 @@ Users need to accces their informations from web and mobile devices.
 This tile-menu app that can be accessed by OrchestraHCM left menu provides clean and simple UI for users to access their infotypes.
 ### Download Files and Upload to OrchestraHCM
 Download [Screen](/orc.ess.infotypes.json), and make your changes according to your business requirements. No scheme need for this app, you can update tiles and screen according to your requirements.
+### Versions
+- July 21, 2026 - Initial Commit
+
+## ESS Time Data
+![ESS Time Data](OrcHCM_ESSTimeData.png)
+### Business Requirement
+Users need to submit an absence request to his/her manager from web and mobile devices.
+### Solution Scenerio
+This tile-menu app that can be accessed by OrchestraHCM left menu provides clean and simple UI for users to submit requests to their managers and reach their time datas.
+### Download Files and Upload to OrchestraHCM
+Download [Screen](/orc.ess.tm.json), and make your changes according to your business requirements. No scheme need for this app, you can update tiles and screen according to your requirements.
 ### Versions
 - July 21, 2026 - Initial Commit
 
