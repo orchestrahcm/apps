@@ -3,7 +3,7 @@ Scheme Based Business Apps with UI Designs for Web and Mobile
 # 
 ## Tile-Based ESS Menus
 
-- [ESS Infotypes](#ess-infotypes)
+- [ESS Infotypes](#ess-infotypes) - Users can reach their infotypes by this menu
 
 ## ESS Infotypes
 ![ESS Infotypes](OrcHCM_ESSInfotypes.png)
