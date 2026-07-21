@@ -7,6 +7,7 @@ Scheme Based Business Apps with UI Designs for Web and Mobile
 - [ESS Time Data](#ess-time-data) - Users can submit request (absence, attendance) to their managers and can reach their time datas by this menu
 - [ESS Payroll Data](#ess-payroll-data) - Users can download their payroll and work paper by this menu
 - [ESS Travel Data](#ess-travel-data) - Users can submit new travel request to their manager by this menu
+- [ESS Expense Data](#ess-expense-data) - Users can submit expense form by this menu
 
 ## ESS Infotypes
 ![ESS Infotypes](OrcHCM_ESSInfotypes.png)
@@ -49,6 +50,17 @@ Users need to submit a travel request their manager from web and mobile devices.
 This tile-menu app that can be accessed by OrchestraHCM left menu provides clean and simple UI for users to submit travel requests to their managers.
 ### Download Files and Upload to OrchestraHCM
 Download [Screen](/orc.ess.trv.json), and make your changes according to your business requirements. No scheme need for this app, you can update tiles and screen according to your requirements.
+### Versions
+- July 21, 2026 - Initial Commit
+
+## ESS Expense Data
+![ESS Expense Data](OrcHCM_ESSExpense.png)
+### Business Requirement
+Users need to submit an expense to their manager from web and mobile devices.
+### Solution Scenerio
+This tile-menu app that can be accessed by OrchestraHCM left menu provides clean and simple UI for users to submit their expenses to their managers.
+### Download Files and Upload to OrchestraHCM
+Download [Screen](/orc.ess.exp.json), and make your changes according to your business requirements. No scheme need for this app, you can update tiles and screen according to your requirements.
 ### Versions
 - July 21, 2026 - Initial Commit
 
