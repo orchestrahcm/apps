@@ -11,7 +11,7 @@ Scheme Based Business Apps with UI Designs for Web and Mobile
 # 
 ## ESS Report Tree Menu
 
-- [ESS Reports](#ess-reports) - Users can reach their reports by this menu
+- [ESS Report Tree Menu](#ess-report-tree-menu) - Users can reach their reports by this menu
 
 #
 ## ESS Infotypes
@@ -69,8 +69,8 @@ Download [Screen](/orc.ess.exp.json), and make your changes according to your bu
 ### Versions
 - July 21, 2026 - Initial Commit
 
-## Report Tree Menu
-![ESS Reports](OrcHCM_ESSReportTree.png)
+## ESS Report Tree Menu
+![ESS Report Tree Menu](OrcHCM_ESSReportTree.png)
 ### Business Requirement
 Users need to reach their reports (attendance, absence).
 ### Solution Scenerio
