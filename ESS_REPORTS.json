@@ -1,0 +1,275 @@
+{
+  "schemeName": "ESS_REPORTS",
+  "type": "Screen",
+  "exportDate": "2026-07-21T14:22:35.240Z",
+  "version": "2.0",
+  "definition": {
+    "TR": ""
+  },
+  "states": [
+    {
+      "stateId": "State0",
+      "name": "State0",
+      "colorIndex": 0,
+      "isDefault": true,
+      "condition": "{\"==\":[{\"var\":\"WIId\"},\"0\"]}",
+      "seqnr": 0,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    },
+    {
+      "stateId": "State1",
+      "name": "State1",
+      "colorIndex": 1,
+      "isDefault": false,
+      "condition": "{\"==\":[{\"var\":\"PageEvent\"},\"Get\"]}",
+      "seqnr": 1,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    },
+    {
+      "stateId": "State2",
+      "name": "State2",
+      "colorIndex": 2,
+      "isDefault": false,
+      "condition": "{\"==\":[{\"var\":\"PostFieldName\"},\"DOEXECUTE\"]}",
+      "seqnr": 2,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    },
+    {
+      "stateId": "State3",
+      "name": "State3",
+      "colorIndex": 3,
+      "isDefault": false,
+      "condition": "{\"and\":[{\"==\":[{\"var\":\"PostFieldName\"},\"DOEXECUTE\"]},{\"==\":[{\"var\":\"SELREP\"},\"repESS2002\"]}]}",
+      "seqnr": 3,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    },
+    {
+      "stateId": "State4",
+      "name": "State4",
+      "colorIndex": 4,
+      "isDefault": false,
+      "condition": "{\"and\":[{\"==\":[{\"var\":\"PostFieldName\"},\"DOEXECUTE\"]},{\"==\":[{\"var\":\"SELREP\"},\"repESS2001\"]}]}",
+      "seqnr": 4,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    },
+    {
+      "stateId": "State5",
+      "name": "State5",
+      "colorIndex": 5,
+      "isDefault": false,
+      "condition": "{\"and\":[{\"==\":[{\"var\":\"PostFieldName\"},\"DOEXECUTE\"]},{\"==\":[{\"var\":\"SELREP\"},\"repESS2006\"]}]}",
+      "seqnr": 5,
+      "posX": 0,
+      "posY": 0,
+      "width": 1040,
+      "height": 220
+    }
+  ],
+  "layouts": [],
+  "edges": [],
+  "annotations": [],
+  "rows": [
+    {
+      "seqnr": "000010",
+      "functionName": "COM",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "cond": "",
+      "par5": "",
+      "deact": "",
+      "comment": "Personnel Report Tree"
+    },
+    {
+      "seqnr": "000020",
+      "functionName": "COM",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "cond": "",
+      "par5": "",
+      "deact": "",
+      "comment": "HRSP 22.06.2026"
+    },
+    {
+      "seqnr": "000030",
+      "functionName": "PRINT",
+      "par1": "CONT",
+      "par2": "",
+      "par3": "",
+      "cond": "",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000040",
+      "functionName": "PRINT",
+      "par1": "PAGE",
+      "par2": "",
+      "par3": "",
+      "cond": "",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000050",
+      "functionName": "GETPERNR",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "cond": "State0",
+      "par5": "",
+      "deact": "",
+      "comment": "Read Employee Data, wiid=0"
+    },
+    {
+      "seqnr": "000060",
+      "functionName": "PROG",
+      "par1": "ESS_REPORTS",
+      "par2": "",
+      "par3": "",
+      "cond": "State1",
+      "par5": "",
+      "deact": "",
+      "comment": "Run ESS_REPORTS program, fill Report Tree"
+    },
+    {
+      "seqnr": "000070",
+      "functionName": "PJSON",
+      "par1": "page.Elements[FieldName=\"reportViewer\"].Data",
+      "par2": "SELREP",
+      "par3": "",
+      "cond": "State2",
+      "par5": "",
+      "deact": "",
+      "comment": "Run ESS_REPORTS program, fill Report Tree"
+    },
+    {
+      "seqnr": "000080",
+      "functionName": "PRINT",
+      "par1": "CONT",
+      "par2": "",
+      "par3": "",
+      "cond": "State2",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000090",
+      "functionName": "COM",
+      "par1": "",
+      "par2": "",
+      "par3": "",
+      "cond": "",
+      "par5": "",
+      "deact": "",
+      "comment": "Going to reports"
+    },
+    {
+      "seqnr": "000100",
+      "functionName": "PJSON",
+      "par1": "container.DETAIL & \"/apps/exec/ess/reports/attendances?PERNR=\"\n& \"&SUBTY=\"\n& \"&BEGDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 0, 8)\n& \"&ENDDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 8, 8)\n& \"&LANGU=\" & page.Langu",
+      "par2": "ATTENDANCES",
+      "par3": "",
+      "cond": "State3",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000110",
+      "functionName": "GOURL",
+      "par1": "=container.ATTENDANCES",
+      "par2": "",
+      "par3": "",
+      "cond": "State3",
+      "par5": "",
+      "deact": "",
+      "comment": "Go to Attendances Report"
+    },
+    {
+      "seqnr": "000120",
+      "functionName": "PJSON",
+      "par1": "container.DETAIL & \"/apps/exec/ess/reports/absences?PERNR=\"\n& \"&SUBTY=\"\n& \"&BEGDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 0, 8)\n& \"&ENDDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 8, 8)\n& \"&LANGU=\" & page.Langu",
+      "par2": "ABSENCES",
+      "par3": "",
+      "cond": "State4",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000130",
+      "functionName": "GOURL",
+      "par1": "=container.ABSENCES",
+      "par2": "",
+      "par3": "",
+      "cond": "State4",
+      "par5": "",
+      "deact": "",
+      "comment": "Go to Absences Report"
+    },
+    {
+      "seqnr": "000140",
+      "functionName": "PJSON",
+      "par1": "container.DETAIL & \"/apps/exec/ess/reports/attendances?PERNR=\"\n& \"&SUBTY=\"\n& \"&BEGDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 0, 8)\n& \"&ENDDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 8, 8)\n& \"&LANGU=\" & page.Langu",
+      "par2": "ATTENDANCES",
+      "par3": "",
+      "cond": "State4",
+      "par5": "",
+      "deact": "*",
+      "comment": ""
+    },
+    {
+      "seqnr": "000150",
+      "functionName": "GOURL",
+      "par1": "=container.ATTENDANCES",
+      "par2": "",
+      "par3": "",
+      "cond": "State4",
+      "par5": "",
+      "deact": "*",
+      "comment": "Go to Attendances Report"
+    },
+    {
+      "seqnr": "000160",
+      "functionName": "PJSON",
+      "par1": "container.DETAIL & \"/apps/exec/ess/reports/absencequota?PERNR=\"\n& \"&SUBTY=\"\n& \"&BEGDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 0, 8)\n& \"&ENDDA=\" & $substring(page.Elements[FieldName=\"DATES\"].Data, 8, 8)\n& \"&LANGU=\" & page.Langu",
+      "par2": "ABSENCEQUOTA",
+      "par3": "",
+      "cond": "State5",
+      "par5": "",
+      "deact": "",
+      "comment": ""
+    },
+    {
+      "seqnr": "000170",
+      "functionName": "GOURL",
+      "par1": "=container.ABSENCEQUOTA",
+      "par2": "",
+      "par3": "",
+      "cond": "State5",
+      "par5": "",
+      "deact": "",
+      "comment": "Go to Absence Quotas Report"
+    }
+  ]
+}
